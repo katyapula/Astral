@@ -1,0 +1,307 @@
+body {
+  background: #3a3a44;
+}
+
+.overlay-spinner {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+
+  img {
+    position: relative;
+    top: 45%;
+    width: 50px;
+  }
+}
+
+// HEADER
+
+header {
+  .clearfix();
+  color: #7f7f7f;
+  padding: 26px 0 22px;
+  background: #4c4c4c;
+  border-bottom: 1px solid #2c2c2c;
+
+  div[class^='col-'] {
+    height: 70px;
+  }
+}
+
+.logo {
+  .vertical-align();
+  display: block;
+  text-align: center;
+}
+
+.logo img {
+  max-width: 100%;
+}
+
+.customer-info {
+  .vertical-align();
+  display: inline-block;
+  color: #fefefe;
+  font-size: 25px;
+  font-weight: 200;
+  margin-left: 10%;
+}
+
+.customer-info__username {
+  color: #6976f9;
+}
+
+.access-link {
+  .vertical-align();
+  display: inline-block;
+  color: #7f7f7f;
+  font-size: 24px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    color: lighten(#7f7f7f, 20%);
+    outline: none;
+  }
+}
+
+.currency-status {
+  .vertical-align();
+  font-size: 17px;
+
+  span {
+    display: block;
+  }
+}
+
+// SUBHEADER
+
+.subheader {
+  .clearfix();
+  padding: 25px 0;
+  background: #4d4d57;
+  border-bottom: 1px solid #3a3a44;
+  border-left: 1px solid #2c2c2c;
+}
+
+.subheader__description {
+  font-size: 23px;
+  margin: 0 0 20px;
+}
+
+.subheader__description__type {
+  display: block;
+  text-transform: uppercase;
+}
+
+.subheader__description__amount {
+  display: block;
+  font-weight: 200;
+  font-size: 21px;
+}
+
+.subheader__address__title {
+  display: block;
+  font-size: 17px;
+  margin: 0 0 9px;
+}
+
+.subheader__address__name {
+  display: inline-block;
+  color: #88878d;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.form-send {
+  margin: 0 2%;
+
+  button {
+    margin-top: 20px;
+    width: 400px;
+  }
+}
+
+.form-send__title {
+  display: block;
+  color: #97969c;
+  font-size: 23px;
+  margin: 0 0 9px;
+}
+
+.form-send__address {
+  display: inline-block;
+  width: 68%;
+}
+
+.form-send__amount {
+  display: inline-block;
+  width: 30%;
+}
+
+.form-send__custom-controls {
+  position: relative;
+
+  input {
+    padding-right: 63px;
+  }
+
+  input[type="number"]::-webkit-outer-spin-button, 
+  input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+  .glyphicon {
+    position: absolute;
+    top: 24px;
+    color: #b3b2b8;
+    cursor: pointer;
+  }
+
+  .glyphicon-chevron-up {
+    right: 40px;
+  }
+
+  .glyphicon-chevron-down {
+    right: 25px;
+  }
+}
+
+// CONTENT
+
+.content {
+  .clearfix();
+  background: #4d4d57;
+  border-left: 1px solid #2c2c2c;
+}
+
+.sidebar {
+  font-size: 22px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.link-set {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px;
+
+  a {
+    color: #7f7f7f;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+      color: lighten(#7f7f7f, 20%);
+    }
+  }
+}
+
+.content-box {
+  padding: 25px 2%;
+  background: #3a3a44;
+
+  h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0 0 25px;
+  }
+}
+
+.table-transactions {
+  word-wrap: break-word;
+  margin: 0 0 50px;
+  width: 100%;
+  table-layout: fixed;
+
+  th {
+    font-size: 21px;
+    font-weight: 400;
+    padding: 3px 5px 3px 25px;
+  }
+
+  td {
+    font-weight: 200;
+    font-size: 18px;
+    vertical-align: top;
+    padding: 3px 5px 3px 25px;
+  }
+}
+
+.indicator {
+  position: relative;
+  display: inline-block;
+  word-wrap: break-word;
+  width: 100%;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    background: @text-color;
+  }
+}
+
+.indicator_green:after {
+  background: #00ff8f;
+}
+
+.highligt-light {
+  color: @text-color;
+}
+
+.highligt-medium {
+  color: #a8a9ae;
+}
+
+.highligt-dark {
+  color: #66676c;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  right: 110%;
+  top: -2px;
+  color: #232227;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  padding: 5px 15px;
+  background: #89888e;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -10px;
+    top: 8px;
+    border-left: 10px solid #89888e;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+  }
+}
+
+.table-transactions tr:hover .tooltip {
+  display: block;
+}
+
+
+

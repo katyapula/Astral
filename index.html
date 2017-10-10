@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Astral</title>
+
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="overlay-spinner">
+      <img src="img/spinner.gif" alt="">
+    </div>
+
+    <header class="container-fluid">
+      <div class="row">
+        <div class="col-xs-2">
+          <a href="#" class="logo">
+            <img src="img/logo.jpg" alt="">
+          </a>
+        </div>
+        
+        <div class="col-xs-4">
+          <span class="customer-info">
+            Welcome
+            <span class="customer-info__username">Lorem Ipsum</span>
+          </span>
+        </div>
+        <div class="col-xs-5">
+          <div class="currency-status">
+            <span>1 XLM = $0.0178</span>
+            <span>Balance Sum = 1,500,00 XLM // $20,000</span>
+          </div>
+        </div>
+
+        <div class="col-xs-1">
+          <a href="#" class="access-link" data-toggle="modal" data-target="#accountModal">Log In</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="subheader col-xs-offset-2">
+      <div class="col-xs-3">
+        <div class="subheader__description">
+          <span class="subheader__description__type">Primary wallet</span>
+          <span class="subheader__description__amount">200,000 XLM</span>
+        </div>
+
+        <div class="subheader__address">
+          <span class="subheader__address__title">Address</span>
+          <span class="subheader__address__name">RCPMuJ0zYakRCPMuJ0zYakRCPMuJ0zYakRCPMuJ0zYakRCPMuJ0zYakRCPMuJ0zYakRCPMuJ0zYak</span>
+        </div>
+      </div>
+
+      <div class="col-xs-9">
+        <form action="#" class="form-send">
+          <span class="form-send__title">SEND Lumens</span>
+          <div class="form-send__address">
+            <input class="form-control" type="text" placeholder="Address">
+          </div>
+          <div class="form-send__amount form-send__custom-controls">
+            <input class="form-control form-control_number" type="number" placeholder="Amount">
+            <span class="glyphicon glyphicon-chevron-up" onclick="$('.form-control_number').val((parseFloat($('.form-control_number').val())+0.0000001).toFixed(7));"></span>
+            <span class="glyphicon glyphicon-chevron-down" onclick="$('.form-control_number').val((parseFloat($('.form-control_number').val())-0.0000001).toFixed(7));"></span>
+          </div>
+          <button class="btn btn-default" onclick="$('.overlay-spinner').show();">Quick Send XLM</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="content col-xs-offset-2">
+      <div class="sidebar col-xs-2">
+        <ul class="link-set">
+          <li>
+            <a href="#">Amazon</a>
+          </li>
+          <li>
+            <a href="#">Savings</a>
+          </li>
+          <li>
+            <a href="#">Nabeel</a>
+          </li>
+        </ul>
+
+        <ul class="link-set">
+          <li>
+            <a href="#">New Account</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="content-box col-xs-10">
+        <h2>Outgoing Transactions</h2>
+
+        <table class="table-transactions">
+          <thead>
+            <tr>
+              <th width="30%">Reference #</th>
+              <th width="40%">Destination Address</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highligt-light">
+              <td>
+                <span class="indicator indicator_green">
+                  Qpg6aAZGJwFDMVNA
+                  <span class="tooltip">Recent Transaction</span>
+                </span>
+              </td>
+              <td>ARRmCOlypGLyLTEduWdHfjBs1EJols6dJIb3yzLV5LCvL6betqIH8nxXnVpnARRmCOlypGLyLTEduWdHfjBs1EJols6dJIb3yzLV5LCvL6betqIH8nxXnVpn</td>
+              <td>2</td>
+              <td>Success</td>
+            </tr>
+            <tr class="highligt-medium">
+              <td>
+                <span class="indicator indicator_green">
+                  Qpg6aAZGJwFDMVNA
+                  <span class="tooltip">Recent Transaction</span>
+                </span>
+              </td>
+              <td>ARRmCOlypGLyLTEduWdHfjBs1EJols3yzLV5LCvL6betqIH8nxXnVpn</td>
+              <td>1</td>
+              <td>Success</td>
+            </tr>
+            <tr class="highligt-medium">
+              <td>
+                <span class="indicator indicator_green">
+                  Qpg6aAZGJwFDMVNA
+                  <span class="tooltip">Recent Transaction</span>
+                </span>
+              </td>
+              <td>ARRmCOlypGLyLTEduWdHfjBs1EJols6dJIb3vL6betqIH8nxXnVpn</td>
+              <td>1</td>
+              <td>In Progress</td>
+            </tr>
+            <tr class="highligt-dark">
+              <td>
+                <span class="indicator indicator_white">
+                  Qpg6aAZGJwFDMVNA
+                  <span class="tooltip">Recent Transaction</span>
+                </span>
+              </td>
+              <td>ARRmCOlypGLyLTEduWdHfjBs1EJols6dJIb3yzLVvL6betqIH8nVpn</td>
+              <td>3</td>
+              <td>Failed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Incoming Transactions</h2>
+
+        <table class="table-transactions">
+          <thead>
+            <tr>
+              <th width="30%">Reference #</th>
+              <th width="40%">Destination Address</th>
+              <th>Amount</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highligt-medium">
+              <td>
+                <span class="indicator indicator_green">
+                  Qpg6aAZGJwFDMVNA
+                  <span class="tooltip">Archived Transaction</span>
+                </span>
+              </td>
+              <td>ARRmCOlypGLyLTEduWdHfjBs1EJols6dJIb3vL6betqIH8nxXnVpn</td>
+              <td>2</td>
+              <td>Success</td>
+            </tr>
+            <tr class="highligt-dark">
+              <td>
+                <span class="indicator indicator_white">
+                  Qpg6aAZGJwFDMVNA
+                  <span class="tooltip">Archived Transaction</span>
+                </span>
+              </td>
+              <td>ARRmCOlypGLyLTEduWdHfjBs1EJols6dJIb3yzLVvL6betqIH8nVpn</td>
+              <td>1</td>
+              <td>Success</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div><!-- /.content -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">User Login</h4>
+          </div>
+          <div class="modal-body">
+            <form action="#">
+              <div class="form-group">
+                <label for="">Username</label>
+                <input type="text" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">Password</label>
+                <input type="password" class="form-control">
+              </div>
+
+              <div class="form-group">
+                <label for="">2 Factor Code</label>
+                <input type="text" class="form-control">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default btn-lg" data-dismiss="modal">Log In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/modal.js"></script>
+  </body>
+</html>
